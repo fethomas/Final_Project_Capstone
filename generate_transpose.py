@@ -76,7 +76,7 @@ filename_base = 'transpose'
 percent_dev = .1
 percent_test = .1
 percent_train = 1.0 - (percent_dev + percent_test)
-total_num = 5000
+total_num = 10000
 test_source = codecs.open(filename_base + '.' + 'test' + '.source', encoding="utf8", mode='w')
 test_target = codecs.open(filename_base + '.' + 'test' + '.target', encoding="utf8", mode='w')
 
