@@ -6,7 +6,7 @@ python3 -m sockeye.train --source transpose.train.source \
                        --target transpose.train.target \
                        --encoder transformer \
                        --decoder transformer \
-					   --rnn lstm \
+					   -rnn-dropout-recurrent lstm \
 					   --max-num-epochs 100 \
                        --validation-source transpose.dev.source \
                        --validation-target transpose.dev.target \
