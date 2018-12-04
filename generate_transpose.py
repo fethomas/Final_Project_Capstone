@@ -1,8 +1,16 @@
 import random
 import sys
 import numpy as np
+import matplotlib.pyplot as plt
+import keras 
 from string import ascii_lowercase
 import codecs
+
+model = Sequential()
+
+from ann_visualizer.visualize import ann_viz
+ann_viz(model) 
+
 sequences = dict()
 
 LETTERS = {str(index - 1) : letter for index, letter in enumerate(ascii_lowercase, start=1)} 
@@ -94,6 +102,18 @@ for i in range(round(percent_dev * total_num)):
     generate_sequence(length, max_num, dev_source, dev_target)
 for i in range(round(percent_test * total_num)):
     generate_sequence(length, max_num, test_source, test_target)
+	
+model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+
+plt.plot(range(50), history_dict['loss'], label='Loss') 
+plt.plot(range(50), history_dict['categorical_accuracy'], label='Accuracy') 
+plt.plot(range(50), history_dict['val_categorical_accuracy'], label='Validation Accuracy') 
+plt.xlabel('Epoch')
+plt.ylabel('Performance')
+plt.legend()
+plt.show()
+plt.imshow(x_train[0], cmap=plt.get_cmap('gray'))
+plt.show()
     
 train_source.close()
 train_target.close()
