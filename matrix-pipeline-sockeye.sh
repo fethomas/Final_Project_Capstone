@@ -6,7 +6,6 @@ python3 -m sockeye.train --source transpose.train.source \
                        --target transpose.train.target \
                        --encoder transformer \
                        --decoder transformer \
-					   --rnn-cell-type gru \
 					   --max-num-epochs 100 \
                        --validation-source transpose.dev.source \
                        --validation-target transpose.dev.target \
