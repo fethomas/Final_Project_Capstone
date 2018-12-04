@@ -2,6 +2,7 @@ import random
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
+from keras.models import Sequential
 import keras 
 from string import ascii_lowercase
 import codecs
