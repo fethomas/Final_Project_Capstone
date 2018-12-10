@@ -4,9 +4,10 @@ rm -Rf ./models
 MODEL_DIR=models
 python3 -m sockeye.train --source transpose.train.source \
                        --target transpose.train.target \
-                       --encoder cnn \
-                       --decoder cnn \
+                       --encoder transformer \
+                       --decoder transformer \
 					   --rnn-cell-type lstm \
+					   --cnn-activation-type relu \
 					   --max-num-epochs 300 \
                        --validation-source transpose.dev.source \
                        --validation-target transpose.dev.target \
