@@ -72,7 +72,7 @@ def generate_sequence_brackets(length,max_num, f_source, f_target):
     #sys.stdout.write('\n')
 
 
-length = 4 #num of elements in rows and colums (all are square matrices)
+length = 9 #num of elements in rows and colums (all are square matrices)
 max_num = 25 #number of distinct symbols
 filename_base = 'transpose'
 percent_dev = .1
