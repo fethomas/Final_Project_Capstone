@@ -8,7 +8,7 @@ python3 -m sockeye.train --source transpose.train.source \
                        --decoder transformer \
 					   --rnn-cell-type lstm \
 					   --cnn-activation-type relu \
-					   --max-num-epochs 300 \
+					   --max-num-epochs 150 \
                        --validation-source transpose.dev.source \
                        --validation-target transpose.dev.target \
                        --output $MODEL_DIR \
